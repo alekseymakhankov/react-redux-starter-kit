@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo');
+
+:global(html, body) {
+  width: 100vw;
+  height: auto;
+  margin: 0;
+}
+
+:global(body) {
+  background-color: rgba(55, 71, 79, 1);
+  font-family: 'Baloo', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+:global(a) {
+  color: wheat;
+  text-decoration: none;
+}
+
+:global(#root) {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(33, 33, 33, 1);
+  color: white;
+  padding: 15px 0px;
+  font-size: 1.1em;
+}

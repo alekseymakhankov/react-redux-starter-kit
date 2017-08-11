@@ -1,0 +1,41 @@
+.select {
+  font-size: 13px;
+  min-width: 90px;
+}
+
+.select :global(.Select-control) {
+  height: 32px;
+}
+.select :global(.Select-placeholder),
+.select:global(.Select--single > .Select-control .Select-value) {
+  line-height: 30px;
+}
+.select :global(.Select-input) {
+  height: 30px;
+}
+.select :global(.Select-input > input) {
+  padding-top: 7px;
+}
+.select :global(.Select-control:hover) {
+  box-shadow: none;
+  border-color: #afafaf;
+}
+.select:global(.is-focused:not(.is-open) > .Select-control) {
+  border-color: #5285b8;
+  box-shadow: 0 0 6px rgba(82,133,184,0.3);
+}
+.select :global(.Select-clear) {
+  line-height: 30px;
+}
+.select:global(.Select--multi .Select-value) {
+  line-height: 1.3;
+  margin-top: 4px;
+}
+
+.select :global(.Select-clear-zone) {
+  background-color: white;
+}
+
+.select :global(.Select-arrow-zone) {
+  background-color:  #ffffff;
+}
