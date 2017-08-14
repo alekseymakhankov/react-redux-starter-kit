@@ -7,7 +7,9 @@ import {
   Link
 } from 'react-router-dom';
 
-import { createStore } from 'redux';
+import ReduxThunk from 'redux-thunk';
+
+import { applyMiddleware, createStore } from 'redux';
 import { Provider } from 'react-redux';
 // import { createLogger } from 'redux-logger';
 
@@ -20,7 +22,8 @@ import style from './style.css';
 
 
 const store = createStore(
-  reducers
+  reducers,
+  applyMiddleware(ReduxThunk)
 );
 
 const App = () => {

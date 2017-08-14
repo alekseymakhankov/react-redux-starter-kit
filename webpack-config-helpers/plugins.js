@@ -13,17 +13,16 @@ const plugins = [
     verbose: true,
     dry: false
   }),
-
+  new ExtractTextPlugin({
+    filename: '[name].css',
+    allChunks: true
+  }),
   new webpack.optimize.CommonsChunkPlugin({
     name: 'vendors'
   }),
   new HtmlWebpackPlugin({
     template: path.resolve(__dirname, '..', 'app', 'index.html'),
     filename: 'index.html'
-  }),
-  new ExtractTextPlugin({
-    filename: '[name].css',
-    allChunks: true
   })
 ];
 

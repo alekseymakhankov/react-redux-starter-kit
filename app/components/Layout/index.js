@@ -8,7 +8,8 @@ const Layout = () => {
     <div className={style.layout}>
       <div className={style.wrapper}>
         <Link to="/firstpage" className={style.link}>FirstPage</Link>
-        <div className={style.logo}>div</div>
+        <Link to="/countries" className={style.link}>Countries</Link>
+        <div className={style.logo} />
       </div>
     </div>
   );

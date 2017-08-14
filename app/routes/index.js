@@ -1,5 +1,6 @@
 import Layout from 'components/Layout';
 import FirstPage from 'components/MainPage';
+import CountryLayout from 'components/CountryLayout';
 
 const routes = [
   {
@@ -9,6 +10,10 @@ const routes = [
   {
     component: FirstPage,
     path: '/firstpage'
+  },
+  {
+    component: CountryLayout,
+    path: '/countries'
   }
 ];
 

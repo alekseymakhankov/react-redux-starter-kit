@@ -25,7 +25,7 @@ const scssLoaderRule = {
       'postcss-loader',
       'font-loader'
     ],
-    publicPath: '../assets/css'
+    publicPath: './assets/'
   })
 };
 
@@ -49,7 +49,7 @@ const cssLoaderRule = {
       'postcss-loader',
       'font-loader'
     ],
-    publicPath: '../assets/css'
+    publicPath: './assets/'
   })
 };
 
@@ -66,13 +66,14 @@ const jsxLoaderRule = {
 };
 
 const imagesLoaderRule = {
-  test: /\.(png|jpg|gif)$/,
+  test: /\.(png|jpg|gif|svg)$/,
   use: [
     {
       loader: 'url-loader',
       query: {
         limit: 10000,
-        name: 'assets/images/[name]-[sha512:hash:base64:7].[ext]'
+        name: '[name]-[sha512:hash:base64:7].[ext]',
+        publicPath: './'
       }
     }
   ]

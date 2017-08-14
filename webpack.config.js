@@ -21,6 +21,7 @@ module.exports = {
     alias: {
       actions: path.join(__dirname, 'app', 'actions'),
       components: path.join(__dirname, 'app', 'components'),
+      constants: path.join(__dirname, 'app', 'constants'),
       base: path.join(__dirname, 'app', 'base'),
       fields: path.join(__dirname, 'app', 'fields'),
       forms: path.join(__dirname, 'app', 'forms'),
