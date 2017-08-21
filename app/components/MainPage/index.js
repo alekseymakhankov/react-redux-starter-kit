@@ -6,7 +6,6 @@ import style from './style.css';
 const MainPage = () => {
   return (
     <div className={style.page}>
-      MainPage
       <ExampleForm />
     </div>
   );

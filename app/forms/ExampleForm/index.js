@@ -8,13 +8,13 @@ import style from './style.css';
 
 const ExampleForm = ({ handleSubmit, pristine, reset, submitting }) => {
   const selectOptions = [
-    { label: 'Red', value: 'ff0000' },
+    { label: 'Blue', value: '0000ff' },
     { label: 'Green', value: '00ff00' },
-    { label: 'Blue', value: '0000ff' }
+    { label: 'Red', value: 'ff0000' }
   ];
   return (
-    <form className={style.formWrapper} onSubmit={handleSubmit((e) => console.log('>>', e))}>
-      <div>
+    <form className={style.formWrapper} onSubmit={handleSubmit(() => ({}))}>
+      <div className={style.input}>
         <div>
           <Field
             name="firstName"
@@ -25,7 +25,7 @@ const ExampleForm = ({ handleSubmit, pristine, reset, submitting }) => {
           />
         </div>
       </div>
-      <div>
+      <div className={style.input}>
         <div>
           <Field
             name="lastName"
@@ -36,7 +36,7 @@ const ExampleForm = ({ handleSubmit, pristine, reset, submitting }) => {
           />
         </div>
       </div>
-      <div>
+      <div className={style.input}>
         <div>
           <Field
             name="email"
@@ -47,7 +47,7 @@ const ExampleForm = ({ handleSubmit, pristine, reset, submitting }) => {
           />
         </div>
       </div>
-      <div>
+      <div className={style.input}>
         <div>
           <div>
             <Field
@@ -70,7 +70,7 @@ const ExampleForm = ({ handleSubmit, pristine, reset, submitting }) => {
           </div>
         </div>
       </div>
-      <div>
+      <div className={style.input}>
         <label>Favorite Color</label>
         <div>
           <Field
@@ -80,7 +80,7 @@ const ExampleForm = ({ handleSubmit, pristine, reset, submitting }) => {
           />
         </div>
       </div>
-      <div>
+      <div className={style.input}>
         <label htmlFor="employed">Employed</label>
         <div>
           <Field
@@ -91,7 +91,7 @@ const ExampleForm = ({ handleSubmit, pristine, reset, submitting }) => {
           />
         </div>
       </div>
-      <div>
+      <div className={style.input}>
         <label>Notes</label>
         <div>
           <Field name="notes" component="textarea" />

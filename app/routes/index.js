@@ -9,7 +9,13 @@ const routes = [
   },
   {
     component: FirstPage,
-    path: '/firstpage'
+    path: '/firstpage',
+    childRoutes: [
+      {
+        component: CountryLayout,
+        path: '/countries'
+      }
+    ]
   },
   {
     component: CountryLayout,

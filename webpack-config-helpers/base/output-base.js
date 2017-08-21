@@ -1,9 +1,8 @@
 const path = require('path');
 
 const output = {
-  path: path.resolve(__dirname, '..', 'dist'),
+  path: path.resolve('build'),
   filename: '[name]-[hash].js',
-  library: '[name]',
   publicPath: '/'
 };
 

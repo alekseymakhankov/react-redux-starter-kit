@@ -2,18 +2,28 @@ const webpack = require('webpack');
 const path = require('path');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
-const config = require('./webpack.config');
 const Express = require('express');
 
 const app = new Express();
 const port = 8080;
 
+let config = null;
+if (process.env.NODE_ENV === 'production') {
+  config = require('./webpack-configs/webpack.config-prod');
+} else {
+  config = require('./webpack-configs/webpack.config-dev');
+}
 const compiler = webpack(config);
 
 app.use(webpackDevMiddleware(compiler, {
-  noInfo: false,
   publicPath: '/',
-  contentBase: 'dist'
+  contentBase: 'dist',
+  hot: true,
+  quiet: true,
+  stats: {
+    colors: true,
+    chunkModules: false
+  }
 }));
 
 app.use(webpackHotMiddleware(compiler));
