@@ -14,13 +14,7 @@ const plugins = [
   }),
   new HtmlWebpackPlugin({
     template: path.resolve('app', 'index.html'),
-    filename: 'index.html',
-    minify: {
-      collapseWhitespace: true,
-      collapseInlineTagWhitespace: true,
-      removeComments: true,
-      removeRedundantAttributes: true
-    }
+    filename: 'index.html'
   })
 ];
 
