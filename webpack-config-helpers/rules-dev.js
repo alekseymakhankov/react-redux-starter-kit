@@ -49,7 +49,30 @@ const cssVendorLoaderRule = {
   include: /node_modules/
 };
 
+const lessLoaderRule = {
+  test: /\.less$/,
+  use: ExtractTextPlugin.extract({
+    fallback: 'style-loader',
+    use: [
+      {
+        loader: 'css-loader',
+        options: {
+          sourceMap: true,
+          localIdentName: '[local]--[hash:base64:6]',
+          minimize: false
+        }
+      },
+      'resolve-url-loader',
+      'less-loader',
+      'postcss-loader',
+      'font-loader'
+    ],
+    publicPath: './assets/'
+  }),
+  include: /node_modules/
+};
 
-rules.push(cssLoaderRule, cssVendorLoaderRule);
+
+rules.push(cssLoaderRule, cssVendorLoaderRule, lessLoaderRule);
 
 module.exports = rules;

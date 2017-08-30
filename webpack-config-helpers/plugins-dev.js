@@ -8,6 +8,10 @@ plugins.push(
   new CleanWebpackPlugin(['./build/*.*'], {
     root: path.join(__dirname, '..')
   }),
+  new webpack.optimize.CommonsChunkPlugin({
+    name: 'vendors',
+    minChunks: Infinity
+  }),
   new BrowserSyncPlugin({
     host: 'localhost',
     port: 3000,

@@ -7,7 +7,10 @@ const jsLoaderRule = {
   test: /\.(js|jsx)$/,
   loader: 'babel-loader',
   exclude: /node-modules/,
-  query: { compact: false }
+  query: {
+    compact: false,
+    plugins: ['add-module-exports']
+  }
 };
 
 const imagesLoaderRule = {

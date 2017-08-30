@@ -9,7 +9,7 @@ module.exports = {
       path.resolve(__dirname, 'app'),
       'node_modules'
     ],
-    extensions: ['.js', '.json', '.jsx'],
+    extensions: ['*', '.js', '.json', '.jsx'],
     alias: {
       actions: path.join(process.cwd(), 'app', 'actions'),
       assets: path.join(process.cwd(), 'assets'),
