@@ -4,7 +4,7 @@ const plugins = require('../webpack-config-helpers/plugins-dev');
 const rules = require('../webpack-config-helpers/rules-dev');
 
 module.exports = Object.assign({}, baseConfig, {
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'source-map',
   output,
   module: {
     rules

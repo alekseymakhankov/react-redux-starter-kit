@@ -9,8 +9,7 @@ plugins.push(
     root: path.join(__dirname, '..')
   }),
   new webpack.optimize.CommonsChunkPlugin({
-    name: 'vendors',
-    minChunks: Infinity
+    name: ['vendors', 'manifest']
   }),
   new BrowserSyncPlugin({
     host: 'localhost',

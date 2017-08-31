@@ -5,12 +5,13 @@ const jsonLoaderRule = {
 
 const jsLoaderRule = {
   test: /\.(js|jsx)$/,
-  loader: 'babel-loader',
-  exclude: /node-modules/,
-  query: {
-    compact: false,
-    plugins: ['add-module-exports']
-  }
+  exclude: /node_modules/,
+  use: [{
+    loader: 'babel-loader',
+    query: {
+      cacheDirectory: true
+    }
+  }]
 };
 
 const imagesLoaderRule = {

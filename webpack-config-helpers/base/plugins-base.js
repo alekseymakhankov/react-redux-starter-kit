@@ -10,11 +10,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const plugins = [
   new ExtractTextPlugin({
     filename: '[name].[contenthash].css',
-    allChunks: true
+    allChunks: true,
+    ignoreOrder: true
   }),
   new HtmlWebpackPlugin({
+    chunksSortMode: 'dependency',
     template: path.resolve('app', 'index.html'),
-    filename: 'index.html'
+    filename: 'index.html',
+    hash: true
   })
 ];
 
