@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Baloo');
 
 :global(html, body) {
-  width: 100vw;
+  width: 100%;
   height: auto;
   margin: 0;
 }
